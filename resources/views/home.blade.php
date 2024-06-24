@@ -14,7 +14,9 @@
                                 style="width: 200px; height: 200px">
                         @endif
                         <h5 class="card-title">{{ $user->name }}</h5>
-                        <p class="card-text">Дата регистрации: {{ $user->created_at->format('M. j, Y') }}</p>
+                        @if ($user->created_at)
+                            <p class="card-text">Дата регистрации: {{ $user->created_at->format('M. j, Y') }}</p>
+                        @endif
                         <p class="card-text">Всего треков: {{ count($user->tracks) }}</p>
                         @if ($user->id == Auth::user()->id)
                             <form id="avatar-file-form" method="POST" enctype="multipart/form-data"

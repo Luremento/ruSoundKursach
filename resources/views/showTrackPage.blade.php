@@ -40,7 +40,9 @@
                     @foreach ($track->comment as $item)
                         <div class="d-flex text-muted pt-3">
                             <p class="pb-3 mb-0 small lh-sm w-100 border-bottom">
-                                <strong class="d-block text-gray-dark">{{ $item->user->name }}</strong>
+                                <a href="{{ route('home', ['user_id' => $track->user->id]) }}">
+                                    <strong class="d-block text-gray-dark">{{ $item->user->name }}</strong>
+                                </a>
                                 {{ $item->comment }}
                                 @if (Auth::id() == $item->user->id || Auth::id() == $track->user->id)
                                     <a type="button" href="{{ route('DeleteComm', ['comment_id' => $item->id]) }}"
