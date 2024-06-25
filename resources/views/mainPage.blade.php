@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    ZETRIX - Профиль
+    ruSound
 @endsection
 
 @section('content')
