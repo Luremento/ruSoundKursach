@@ -27,7 +27,7 @@
                     @endif
                     @if (count($albom) > 0)
                         <div class="container mt-5 row gap-5">
-                            <h3 class="d-flex justify-content-center">Альбомы</h3>
+                            <h3 class="d-flex justify-content-center">Плэй-листы</h3>
                             @foreach ($albom as $item)
                                 <div
                                     class="container d-flex justify-content-center flex-md-column gap-2 links w-auto text-center">
